@@ -1,7 +1,15 @@
 
-from math import pi
+# from math import pi
+import math
 import sys
 # import this
+import update
+import config
+
+from decimal import Decimal
+from fractions import Fraction
+
+import random
 
 def test_func():
     '''i am a test func'''
@@ -22,18 +30,70 @@ def outer_function():
 
 a = 10
 
+def var_args(name,greet="Good morning"):
+    print(name,greet)
+
+def arbi_args(*names):
+    print(names[0])
+
+def factorial(num):
+    if num==1:
+        return 1
+    else:
+        return num * factorial(num -1)
+
+multiply = lambda x,y : x*y
+
+
+
 # print(test_func.__doc__)
 # test_func()
 
 if __name__ == "__main__":
 
-    genre = ['pop', 'rock', 'jazz']
-    i=0
-    while i< len(genre):
-        print(genre[i])
-        i+=1
-    else:
-        print("while exhausted..") 
+    # print(random.randrange(1,20))
+    x = ['a', 'b', 'c', 'd', 'e']
+    # print(random.choice(x))
+    print(random.shuffle(x))
+    print(random.random())
+
+    # print(math.pi)
+    # print(math.cos(math.pi))
+    # print(math.exp(10))
+    # print(math.log10(1000))
+    # print(math.sinh(1))
+    # print(math.factorial(6))
+    # print(Fraction('1.4'))
+
+    # d = Decimal('1.1')+Decimal('2.2')
+    # print(d)
+    # print(Decimal('1.2') * Decimal('2.50'))
+
+    # print(0.1)
+    # print(Decimal(0.1))
+
+    # print(config.a,config.b)
+
+    # my_list = [1, 5, 4, 6, 8, 11, 3, 12]
+
+    # print(list(filter(lambda x:(x%2==0),my_list)))
+    # print(list(map(lambda x:(x*2),my_list)))
+
+    # print(multiply(2,3))
+
+
+    # print("factorial: {ans}".format(ans=factorial(3)))
+    # var_args(greet="Hello",name="mfaisal")
+    # arbi_args(1,2,3,4)
+
+
+    # genre = ['pop', 'rock', 'jazz']
+    # i=0
+    # while i< len(genre):
+    #     print(genre[i])
+    #     i+=1
+    # else:
+    #     print("while exhausted..") 
 
     # for item in genre:
     #     print(item)
